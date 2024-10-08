@@ -36,5 +36,5 @@ jobs:
 
     - name: Deploy
       run: |
-        gunicorn -w 4 app:app
+        gunicorn -w 2 app:app
       # python src/app.py
