@@ -31,6 +31,8 @@ jobs:
 
     - name: Install dependencies
       run: |
+        python -m venv .venv
+        . .venv/bin/activate
         pip install -r requirements.txt
       working-directory: ./src  # Change this to your project's root directory
 
