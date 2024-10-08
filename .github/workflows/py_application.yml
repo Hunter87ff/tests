@@ -36,5 +36,5 @@ jobs:
 
     - name: Deploy
       run: |
-        gunicorn --threads 8 --bind 0.0.0.0:3000 app:app
+        gunicorn -w 4 app:app
       # python src/app.py
