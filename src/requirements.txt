@@ -1,2 +1,7 @@
 flask
+psutil
 gunicorn
+pymongo
+requests
+pymongo[srv]
+python-dotenv
