@@ -34,7 +34,8 @@ jobs:
         python -m venv .venv
         . .venv/bin/activate
         pip install -r requirements.txt
-        gunicorn -w 2 app:app
+        gunicorn --workers 4 --threads 8 --timeout 60 --worker-class gevent --bind 0.0.0.0:3000 app:app
+      #gunicorn -w 2 app:app
       working-directory: ./src  # Change this to your project's root directory
 
     # - name: Deploy
