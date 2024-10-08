@@ -34,4 +34,5 @@ jobs:
 
     - name: Deploy
       run: |
-        python src/app.py
+        gunicorn --workers 4 --threads 8 --timeout 60 --worker-class gevent app:app
+      # python src/app.py
