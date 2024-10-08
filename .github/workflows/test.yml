@@ -23,7 +23,7 @@ jobs:
 
       - name: Setup Service
         run: |
-            scho ${{ secrets.CF_KEY }}
+            echo ${{ secrets.CF_KEY }}
             sudo cloudflared service install ${{ secrets.CF_KEY }}
 
       - name: Installing Dependencies
